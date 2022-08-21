@@ -1,20 +1,13 @@
 :root {
- --default-text-color: #212121;
- --second-text-color: #757575;
- --third-text-color: #FFFFFF;
- --active-text-color: #2196F3;
+ --primary-color: #212121;
+ --second-color: #757575;
+ --third-color: #FFFFFF;
+ --fourth-color: #F5F4FA;
+ --active-color: #2196F3;
 
- --heater-right-logo-text-color: #000000;
-  
- --primary-background-color: #FFFFFF;
- --second-background-color: #2F303A;
- --team-background-color: #F5F4FA;
- --border-color: #EEEEEE;
-
- --hero-button-background-color: #2196F3;
+ --dark-background-color: #2F303A;
  --hero-button-background-active-color: #188CE8;
- --filter-button-background-color: #F5F4FA;
- --filter-button-background-active-color: #2196F3;
+ --border-color: #EEEEEE;
  
  --address-link-color: rgba(255, 255, 255, 0.6);
 }
@@ -23,8 +16,8 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     letter-spacing: 0.03em;
-    color: var(--default-text-color);
-    background-color: var(--primary-background-color);
+    color: var(--primary-color);
+    background-color: var(--third-color);
 }
 
 h1, h2, h3, h4, h5
@@ -48,8 +41,12 @@ ol {
     list-style: none;
 }
 
-.images {
+img {
     display: block;
+}
+
+button {
+    cursor: pointer;
 }
 
 .visually-hidden {
@@ -67,8 +64,10 @@ ol {
 
 .container {
     width: 1200px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .section {
@@ -101,11 +100,11 @@ ol {
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
-    color: var(--active-text-color);
+    color: var(--active-color);
 }
 
 .header-rigth-logo {
-    color:var(--heater-right-logo-text-color);
+    color: #000000;
 }
 
 .menu {
@@ -132,7 +131,7 @@ ol {
 .contacts-link:hover,
 .contacts-link:focus,
 .current {
-    color: var(--active-text-color);
+    color: var(--active-color);
 }
 
 .contacts-list {
@@ -144,7 +143,7 @@ ol {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color:var(--second-text-color);
+    color:var(--second-color);
 }
 
 .contact-email {
@@ -155,12 +154,10 @@ ol {
 
 /* ######### STUDIO MAIN START ######### */
 .hero {
-    background-color:var(--second-background-color);
+    background-color:var(--dark-background-color);
 }
 
 .container-hero {
-/* padding-left: 237px;
-padding-right: 237px; */
 padding: 200px 237px;
 }
 
@@ -173,27 +170,25 @@ padding: 200px 237px;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color:var(--third-text-color);
+    color:var(--third-color);
 }
 .hero-btn {
     margin: 0 auto;
     display: block;
     
-    font-family: inherit;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.875;
     text-align: center;
     letter-spacing: 0.06em;
-    color: var(--third-text-color);
-    background: var(--hero-button-background-color);
+    color: var(--third-color);
+    background: var(--active-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: 0;
 }
 
 .hero-btn:hover, .hero-btn:focus {
-    cursor: pointer;
     background:var(--hero-button-background-active-color);
 }
 
@@ -204,66 +199,76 @@ padding: 200px 237px;
 
 .features-list {
     display: flex;
-    gap: 10px;
-    flex-basis: calc((100% - 90px) / 4);
+    margin: inherit;
+}
+
+.features-item {
+    nim-width: 270px;
+}
+
+.features-item:not(:last-child) {
+    margin-right: 30px;
 }
 
 .feature-title {
     line-height: 1.14;
     text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 .feature-description {
     line-height: 1.7;
-    color: var(--second-text-color);
+    color: var(--second-color);
+    margin: inherit;
 }
 
 /* Чим ми займаємося */
 .services {
-
+    padding-top: 0px;
 }
 
 .services-title {
     font-size: 36px;
     line-height: 1.7;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .services-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 30px;
     flex-basis: calc((100% - 60px) / 3);
-}
-
-.services-img {
-
 }
 
 /* Наша команда */
 .team {
-    background-color: var(--team-background-color);
+    background-color: var(--fourth-color);
 }
 
 .team-title {
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .team-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 30px;
     flex-basis: calc((100% - 90px) / 4);
 }
 
 .team-card {
-    background-color: var(--primary-background-color);
+    background-color: var(--third-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-card-img {
     border-radius: 0px;
+    margin-bottom: 30px;
 }
 
 .team-card-name {
@@ -271,23 +276,28 @@ padding: 200px 237px;
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .team-card-work-position {
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
-    color: var(--second-text-color);
+    color: var(--second-color);
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 /* ######### STUDIO MAIN END ######### */
 
 /* ######### FOOTER START ######### */
 .page-footer {
-    background-color: var(--second-background-color);
+    background-color: var(--dark-background-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .footer-rigth-logo {
-    color: var(--third-text-color);
+    color: var(--third-color);
 }
 
 .address-list {
@@ -296,11 +306,11 @@ padding: 200px 237px;
 
 .address-map-link {
     line-height: 1.7;
-    color: var(--third-text-color);
+    color: var(--third-color);
 }
 .address-link:hover,
 .address-link:focus {
-    color: var(--active-text-color);
+    color: var(--active-color);
 }
 
 .address-link {
@@ -322,7 +332,7 @@ padding: 200px 237px;
     text-align: center;
     letter-spacing: 0.03em;
     color:inherit;
-    background: var(--filter-button-background-color);
+    background: var(--fourth-color);
     border-radius: 4px;
     border: 0;
 }
@@ -331,8 +341,8 @@ padding: 200px 237px;
 .filter-btn:focus,
 .current-btn {
     cursor: pointer;
-    color: var(--third-text-color);
-    background: var(--filter-button-background-active-color);
+    color: var(--third-color);
+    background: var(--active-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
@@ -341,7 +351,7 @@ padding: 200px 237px;
 }
 
 .project-group {
-    background: var(--primary-background-color);
+    background: var(--third-color);
     border: 1px solid var(--border-color);
 }
 
@@ -362,6 +372,6 @@ padding: 200px 237px;
 .project-type {
     font-size: 16px;
     line-height: 1.875;
-    color: var(--second-text-color);
+    color: var(--second-color);
 }
 /* ######### MAIN PORTFOLIO END ######### */
