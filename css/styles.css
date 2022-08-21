@@ -100,9 +100,6 @@ button {
     font-size: 26px;
     line-height: 1.19;
     color: var(--active-color);
-
-    padding-top: 24px;
-    padding-bottom: 24px;
 }
 
 .header-rigth-logo {
@@ -304,6 +301,11 @@ button {
 
 .address-list {
     font-style: normal;
+    margin-top: 20px;
+}
+
+.address-item:not(:last-child) {
+    margin-bottom: 9px;
 }
 
 .address-map-link {
