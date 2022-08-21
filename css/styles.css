@@ -7,7 +7,6 @@
 
  --dark-background-color: #2F303A;
  --hero-button-background-active-color: #188CE8;
- --border-color: #EEEEEE;
  
  --address-link-color: rgba(255, 255, 255, 0.6);
 }
@@ -78,7 +77,7 @@ button {
 /* ######### HEADER START ######### */
 .page-header
 {
-
+    border-bottom: 1px solid #ECECEC;
 }
 
 .container-header {
@@ -101,6 +100,9 @@ button {
     font-size: 26px;
     line-height: 1.19;
     color: var(--active-color);
+
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .header-rigth-logo {
@@ -144,26 +146,25 @@ button {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color:var(--second-color);
+
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
-.contact-email {
-
-}
 
 /* ######### HEADER END ######### */
 
 /* ######### STUDIO MAIN START ######### */
 .hero {
     background-color:var(--dark-background-color);
-}
-
-.container-hero {
-padding: 200px 237px;
+    padding: 200px 0;
 }
 
 .hero-title {
+    margin: inherit;
     margin-bottom: 30px;
-
+    width: 696px;
+    
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -186,6 +187,7 @@ padding: 200px 237px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: 0;
+    padding: 10px 32px;
 }
 
 .hero-btn:hover, .hero-btn:focus {
@@ -199,11 +201,10 @@ padding: 200px 237px;
 
 .features-list {
     display: flex;
-    margin: inherit;
 }
 
 .features-item {
-    nim-width: 270px;
+    width: 270px;
 }
 
 .features-item:not(:last-child) {
@@ -219,7 +220,7 @@ padding: 200px 237px;
 .feature-description {
     line-height: 1.7;
     color: var(--second-color);
-    margin: inherit;
+    margin: 0;
 }
 
 /* Чим ми займаємося */
@@ -237,9 +238,11 @@ padding: 200px 237px;
 .services-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    flex-basis: calc((100% - 60px) / 3);
 }
+
+.service-item:not(:last-child) {
+    margin-right: 30px;
+} 
 
 /* Наша команда */
 .team {
@@ -257,7 +260,6 @@ padding: 200px 237px;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    flex-basis: calc((100% - 90px) / 4);
 }
 
 .team-card {
@@ -308,6 +310,7 @@ padding: 200px 237px;
     line-height: 1.7;
     color: var(--third-color);
 }
+
 .address-link:hover,
 .address-link:focus {
     color: var(--active-color);
@@ -321,10 +324,18 @@ padding: 200px 237px;
 
 /* ######### MAIN PORTFOLIO START ######### */
 .filter-list {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+}
 
+.filter-item:not(:last-child) {
+    margin-right: 8px;
 }
 
 .filter-btn {
+    padding: 6px 22px;
+
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -335,6 +346,9 @@ padding: 200px 237px;
     background: var(--fourth-color);
     border-radius: 4px;
     border: 0;
+}
+.filter-first-btn {
+    padding: 6px 25px;
 }
 
 .filter-btn:hover,
@@ -347,27 +361,34 @@ padding: 200px 237px;
 }
 
 .projects-list {
-
+    display:flex;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .project-group {
     background: var(--third-color);
-    border: 1px solid var(--border-color);
+    border-bottom: 1px solid #EEEEEE;
 }
 
 .project-link {
     color: inherit;
 }
 
-.project-img {
-
-}
-
-.project-title {
+.project-name {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+    margin-bottom: 4px;
 }
+
+.project-group p {
+    margin: 0;
+}
+.project-title {
+    margin: 20px 24px;
+}
+
 
 .project-type {
     font-size: 16px;
