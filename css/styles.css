@@ -267,7 +267,7 @@ button {
 
 .team-card-img {
     border-radius: 0px;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
 }
 
 .team-card-name {
@@ -283,8 +283,8 @@ button {
     line-height: 1.19;
     text-align: center;
     color: var(--second-color);
-    margin-top: 0;
-    margin-bottom: 30px;
+    margin:inherit;
+    padding-bottom: 30px;
 }
 /* ######### STUDIO MAIN END ######### */
 
@@ -299,9 +299,12 @@ button {
     color: var(--third-color);
 }
 
+.address-contacts {
+    margin-top: 20px;
+}
+
 .address-list {
     font-style: normal;
-    margin-top: 20px;
 }
 
 .address-item:not(:last-child) {
@@ -388,7 +391,7 @@ button {
     margin: 0;
 }
 .project-title {
-    margin: 20px 24px;
+    padding: 20px 24px;
 }
 
 
